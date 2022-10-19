@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;500;700&family=Ubuntu:wght@300;500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.close,
+.open {
+    display: none;
+}
+
+
+.header{
+    padding: 20px;
+    position: relative;
+    height: 90vh;
+    border-radius: 0 0 0 100px;
+    background: linear-gradient(to right, hsl(13, 100%, 72%, 0.9), hsl(353, 100%, 62%, 0.9)), url(./images/bg-pattern-intro-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 2em 0;
+    margin-left: 2.4em;
+}
+
+.nav-links{
+    display: flex;
+    font-size: 0.8em;
+    width: 80%;
+}
+
+.nav-links h3{
+    margin: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links h3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+.header-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left:auto ;
+}
+
+.login{
+    font-size: 1.3em;
+    color: white;
+}
+
+.signup{
+    font-size: 1.4em;
+    color: hsl(356, 100%, 66%);
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.signup:hover{
+    color: white;
+    background-color:hsl(355, 100%, 74%) ;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+    font-size: 1.3em;
+    color: white;
+}
+
+.hero h1{
+    margin-bottom: 20px;
+}
+.hero p{
+    margin-bottom: 50px;
+}
+
+.btn1{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 0.8em;
+    margin-right: 0.7em;
+}
+
+.btn1 a{
+    color: hsl(356, 100%, 66%);
+}
+.btn2 a{
+    color: white;
+}
+.btn2{
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 0.8em;
+}
+
+main{
+    text-align: center;
+}
+
+.main-heading{
+    color: hsl(208, 49%, 24%);
+    font-size: 1.7em;
+    margin-top: 4em;
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width:700px) {
+    .header {
+        background: linear-gradient(to right bottom, hsl(13, 100%, 72%), hsl(353, 100%, 62%, 0.9)), url(./images/bg-pattern-intro-mobile.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .nav-links{
+        display: none;
+        position: absolute;
+        left: -3%;
+        top: 10%;
+        flex-direction: column;
+        text-align: center;
+        z-index: 2;
+        background-color: white;
+        width: 80vw;
+        margin-top: 5em;
+        padding-top: 2.5em;
+        padding-bottom: 2em;
+        border-radius: 20px;
+    }
+
+    .h3-link{
+        border: 1px solid black;
+    }
+
+    .links{
+        margin: 20px;
+        padding: 10px 0;
+        background-color: hsl(240, 2%, 79%);
+        border-radius: 10px;
+        display: none;
+    }
+
+    .nav-links h3{
+        margin-bottom: 2em;
+        color: hsl(208, 49%, 24%);
+    }
+    .nav-links a{
+        color: hsl(208, 49%, 24%);
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-links ul li{
+        margin-bottom: 30px;
+    }
+
+    .header-btn{
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-btn .login {
+    color: hsl(208, 49%, 24%);
+    margin: 40px 0;
+    font-size: 1.2em;
+    }
+
+    .header-btn .signup {
+        display: inline-block;
+        color: white;
+        margin-bottom: 30px;
+        font-size: 1.1em;
+        padding: 5px 5px;
+        width: 25vw;
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: 50px;
+        background: linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%, 0.8));
+    }
+
+    .open,.close{
+        display: block;
+    }
+
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+
+
+        .main-heading {
+    margin-top: 3.5em;
+        margin-bottom: 2em;
+        font-size: 1.75em;
+        color: hsl(208, 49%, 24%);
+    }
+
+    .section-1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .section-1 h2, .section-3 h2{
+        margin:1.7em 3em 1em;
+        font-size: 1.7em;
+        color: hsl(208, 49%, 24%);
+    }
+    .section-1 p,.section-2 p, .section-3 p{
+        margin:0 3em ;
+        font-size: 1.2em;
+        color: hsl(240, 2%, 46%);
+    }
+
+    .section-2 {
+        position: relative;
+        margin-bottom: 5em;
+    }
+    
+    .section-2-text {
+        background-color: hsl(237, 23%, 32%);
+        background: linear-gradient(hsla(238, 29%, 17%, 0.9), hsl(237, 17%, 21%, 0.9)), url(./images/bg-pattern-circles.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 0 100px 0 100px;
+        margin-top: 20em;
+    }
+    
+    .section-2 h2 {
+        padding-top: 8em;
+        color: white;
+        font-size:2.3em;
+        }
+    
+    .section-2 p {
+        color: white;
+        padding-bottom: 5em;
+        }
+    
+    .section-2 img {
+        position: absolute;
+        z-index: 1;
+        top: -40%;
+        left: 0;
+        width: 500px;
+    }
+
+    .footer {
+        background-color: hsl(240, 10%, 16%);
+        padding-bottom: 4em;
+        border-radius: 0 100px 0 0;
+        margin-top: 4em;
+        text-align: center;
+    }
+    
+    .footer-img {
+        width: 80px;
+        margin: 0 auto;
+        padding: 5em 0 3em;
+    }
+    
+    .footer-links h3 a {
+        color: white;
+    
+    }
+    
+    .footer-links h3 {
+        margin: 2em 0;
+    }
+    
+    .footer-links ul a {
+        color: hsl(240, 8%, 53%);
+        display: block;
+        margin: 10px;
+    }
+}
+
+@media (min-width:300px) and (max-width:450px) {
+    .section-2 img {
+        position: absolute;
+        z-index: 1;
+        top: -25%;
+        left: 0;
+        width: 390px;
+    }
+    .section-2{
+        transform: translateY(-10%);
+    }
+    .section-3{
+        transform: translateY(-10%);
+    }
+    footer{
+        transform: translateY(-10%);
+    }
+}
+
+@media screen and (min-width:700px) {
+
+    main{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .all-link{
+        position: relative;
+    }
+
+    .links{
+        display: none;
+        background-color: white;
+        position: absolute;
+        flex-direction: column;
+        text-align: center;
+        text-align: start;
+        padding: 10px;
+        left: 20%;
+        border-radius: 5px;
+    }
+
+    .show{
+        display: block;
+    }
+
+    .nav-links{
+        display: flex;
+    }
+
+    .nav-links a{
+        margin-bottom: 20px;
+        color: hsl(208, 49%, 24%);
+        display: block;
+        margin-bottom: 10px;
+            
+    }
+        .nav-links ul li a {
+            margin-bottom: 20px;
+    
+        }
+
+        .header-btn .signup{
+            color: hotpink;
+        }
+        .header-btn .login{
+            color: white;
+        }
+
+    .section-1,.section-3{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4em;
+    }
+    .section-1-text{
+        text-align: start;
+        width: 50%;
+        font-size: 0.85em;
+        margin-left: 60px;
+    }
+
+        .section-1 p,
+        .section-3 p {
+            color: hsl(240, 2%, 46%);
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+    .section-1 h2,.section-3 h2{
+        margin-bottom: 10px;
+        color: hsl(208, 49%, 24%);
+    }
+
+    .section-1-img{
+        width: 40%;
+    }
+
+    .section-2{
+        display: flex;
+        background-color: hsl(237, 23%, 32%);
+        background: linear-gradient(hsla(238, 29%, 17%, 0.9), hsl(237, 17%, 21%, 0.9)), url(./images/bg-pattern-circles.svg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        border-radius: 0 100px 0 100px;
+        margin-bottom: 4em;
+    }
+
+    .section-2-text{
+        height: 450px;
+        text-align: start;
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        color: white;
+        margin-top: 80px;
+            
+            
+    }
+
+    .section-2 p{
+        color: hsl(240, 13%, 78%);
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .section-3-text{
+        text-align: start;
+        width: 50%;
+        font-size: 0.85em;
+    }
+
+    .footer{
+        display: flex;
+        background-color: hsl(240, 10%, 16%);
+        padding: 30px 60px;
+        justify-content: space-evenly;
+        border-radius: 0 100px 0 0;
+    }
+
+    .footer-img{
+        margin-right: 10%;
+    }
+
+    .footer-links{
+        display: flex;
+        width: 80%;
+    }
+    .footer-links h3 a{
+        color: white;
+        margin-bottom:20px ;
+    }
+
+    .footer-links h3{
+        margin-bottom: 20px;
+    }
+
+    .sub-links a{
+        display: flex;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .footer-link-1,.footer-link-2{
+        margin-right: 25%;
+    }
+
+}
+
+
